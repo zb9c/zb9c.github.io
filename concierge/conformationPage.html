@@ -19,7 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Logo Website thing</title>
   </head>
-  <body>
+  <body onload="readCookie()">
     <div >
         <p class="MainName">Bowling Green Concierce Service</p>
     </div>
@@ -30,45 +30,37 @@
 
     <form action="" class= "mainForm">
         
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input type="text" name="firstName" id="firstName" class="form-control">
-                </div>
-            </div>
-                <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" name="lastName" id="lastName" class="form-control">
-
-                </div>
+        
+            
+        <div class="form-group">
+            <label for="fullName">Name</label>
+            <input type="text" name="fullName" id="fullName" class="form-control" readonly="readonly">
         </div>
-
+        
         <!-- We put each for element inside a div class form group to add acurate spacing-->
         <div class="form-group">
             <!-- label is what is displayed above the actual input box-->    
             <label for="email">Email</label>
-            <input type="text" name = "email" id ="email" class="form-control">
+            <input type="text" name = "email" id ="email" class="form-control" readonly="readonly">
         </div>
         
         <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="text" name = "phone" id ="phone" class="form-control">
+            <input type="text" name = "phone" id ="phone" class="form-control" readonly="readonly">
         </div>
         
         <div class="form-group">
-            <label for="service">Avaliable Services</label>
-            <select name="service" id="service" class="form-control">
-                <option value="CarDetail">Car Detail $75</option>
-                <option value="GroceryPicup">Grocery Pickup $55</option>
-                <option value="DogWalking">Dog Walking $25</option>
-                <option value="TaxiService">Taxi Service $35</option>
-            </select>
+            <label for="service">Selected Service</label>
+            <input type="text" name = "service" id ="service" class="form-control" readonly="readonly">                       
         </div>
-        <button type="button" class="form-control" id="submitButton" onclick="setCookie()">Submit</button>
-<!--
-        <button type="submit" class="form-control" id="submitButton" onclick="setCookie(), window.location.href='/conformationPage.html'">Submit</button>
--->    
+
+        <div class="form-group">
+          <label for="total">Total: </label>
+          <input type="text" name = "total" id ="total" class="form-control" readonly="readonly">                       
+        </div>
+
+        <button type="submit" class="form-control" id="confirmButton">Confirm</button>
+        <small id="smallText">After confirming, you will get a call confirming all details</small>
     </form>
 
 

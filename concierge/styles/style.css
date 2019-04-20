@@ -15,6 +15,9 @@ body {
     margin: auto;
     /*background-color: aliceblue;*/
 }
+.form-control{
+    text-align: center;
+}
 label {
     color: white;
 }
@@ -27,7 +30,16 @@ label {
     animation-iteration-count: infinite;
 
 }
+#total{
+    width:40%;
+    margin: auto;
+}
 #submitButton{
+    width: 75%;
+    margin: auto;
+    border-radius: 4px;
+}
+#confirmButton{
     width: 75%;
     margin: auto;
     border-radius: 4px;
