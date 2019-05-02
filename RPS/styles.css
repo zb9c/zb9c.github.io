@@ -1,31 +1,31 @@
 *{
-margin:0;
-padding: 0;
-box-sizing: boarder-box;
+   margin:0;
+   padding: 0;
+   box-sizing: boarder-box;
 }
 body{
-background-color: #24274E;
+    background-color: #24274E;
 }
 header {
-background:white;
-padding: 28px;
+    background:white;
+    padding: 28px;
 }
 header h1 {
-color: #24272E;
-text-align: center;
-font-family: 'Asap', sans-serif;
+    color: #24272E;
+    text-align: center;
+    font-family: 'Asap', sans-serif;
 }
 .scoreboard{
-border: 3px solid white;
-width: 200px;
-margin: 20px auto;
-color: white;
-font-size: 46px;
-border-radius: 4px;
-text-align: center;
-padding: 15px 20px;
-font-family: 'Asap';
-position: relative;
+    border: 3px solid white;
+    width: 200px;
+    margin: 20px auto;
+    color: white;
+    font-size: 46px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 15px 20px;
+    font-family: 'Asap';
+    position: relative;
 }
 .badge{
     background: #E2584D;
@@ -66,10 +66,13 @@ position: relative;
 }
 img {
     border-radius: 100px;
-  }
+}
 #action-message{
-    font-size: 14px;
-    text-aligh: center;
+    font-size: 35px;
+    text-align: center;
+    padding: 15px 20px;
+    font-family: 'Asap';
+    position: relative;
     font-family: 'Asap';
     color: white;
 }
