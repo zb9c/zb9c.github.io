@@ -1,0 +1,5 @@
+Tutorial - rock paper scissors game
+
+In this turorial we will build a rock paper sciscors game
+We start by first creating an index.html file, styles.css file, and a script.js file.
+
