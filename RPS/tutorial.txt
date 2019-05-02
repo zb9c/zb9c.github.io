@@ -1,5 +1,9 @@
 Tutorial - rock paper scissors game
 
-In this turorial we will build a rock paper sciscors game
-We start by first creating an index.html file, styles.css file, and a script.js file.
-
+In this turorial we will build a rock paper sciscors game.
+We start by first creating an index.html file, styles.css file, and a script.js file. We will also need to find the images we want to use for 'rock', 'paper', and 'scissors'. After we make these files, open them up in your favorite editor. For me, I will be using Visual Studio Code.
+THe first thing I like to do is put in my boiler-plate code. This is just the beginnings of the HTML that is similar in almost all projects. The way VSC does this is by first typing "!" and clicking Enter. After that is setup, we need to link to our own file, so add 
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+    <script src="script.js"></script>
+in the <head> of the index.html file.
