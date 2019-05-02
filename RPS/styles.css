@@ -67,3 +67,9 @@ position: relative;
 img {
     border-radius: 100px;
   }
+#action-message{
+    font-size: 14px;
+    text-aligh: center;
+    font-family: 'Asap';
+    color: white;
+}
