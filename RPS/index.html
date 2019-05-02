@@ -24,15 +24,15 @@
     </div>
     
     <div class="choices">
-        <div id="r" class="choice">
+        <div id="r" class="choice" onclick="clickRock()">
             <img src="images/rock.png" alt="">
 	</div>
         
-        <div id="p" class="choice">
+        <div id="p" class="choice" onclick="clickPaper()">
             <img src="images/paper.png" alt="">
 	</div>
         
-        <div id="s" class="choice">
+        <div id="s" class="choice" onclick="clickScissors()">
             <img src="images/scissors.png" alt="">
 	</div>
     
@@ -40,6 +40,7 @@
 
     
     <p id="action-message">Make your move!</p>
+    <button id="reset-button" onclick="resetGame()">ResetGame</button>
 </body>
 
 </html>
