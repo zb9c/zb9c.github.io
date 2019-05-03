@@ -47,6 +47,8 @@ header h1 {
 .result{
    font-size: 40px;
    color: white;
+   text-align: center;
+   position: relative;
 
 }
 .result > p {
@@ -75,4 +77,11 @@ img {
     position: relative;
     font-family: 'Asap';
     color: white;
+}
+#reset-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 0 auto;
 }
