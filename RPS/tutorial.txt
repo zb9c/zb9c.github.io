@@ -1,9 +1,42 @@
 Tutorial - rock paper scissors game
 
-In this turorial we will build a rock paper sciscors game.
+In this tutorial we will build a rock paper scissors game.
 We start by first creating an index.html file, styles.css file, and a script.js file. We will also need to find the images we want to use for 'rock', 'paper', and 'scissors'. After we make these files, open them up in your favorite editor. For me, I will be using Visual Studio Code.
-THe first thing I like to do is put in my boiler-plate code. This is just the beginnings of the HTML that is similar in almost all projects. The way VSC does this is by first typing "!" and clicking Enter. After that is setup, we need to link to our own file, so add 
+The first thing I like to do is put in my boiler-plate code. This is just the beginnings of the HTML that is similar in almost all projects. The way VSC does this is by first typing "!" and clicking Enter. After that is setup, we need to link to our own file, so add 
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
     <script src="script.js"></script>
-in the <head> of the index.html file.
+in the <head> of the index.html file. After that, were going to want to start adding our game elements. To Begin, lets add the scoreboard.
+These lines will do that:
+    <div class="scoreboard">
+        <div id="user-label" class="badge" >user</div>
+        <div id="computer-label" class="badge">Computer</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
+    </div>
+Next well add out "result" area and our images. The following code will do that for us:
+    <div class="result">
+        <p>Paper covers rock. You win!</p>
+    </div>   
+    <div class="choices">
+        <div id="r" class="choice" onclick="clickRock()">
+            <img src="images/rock.png" alt="">
+	    </div>
+        
+        <div id="p" class="choice" onclick="clickPaper()">
+            <img src="images/paper.png" alt="">
+	    </div>
+        
+        <div id="s" class="choice" onclick="clickScissors()">
+            <img src="images/scissors.png" alt="">
+	    </div>
+    </div>
+Finally, we will add an action message telling the player what to do, and a button that will reset the game.
+    <p id="action-message">Make your move!</p>
+    <button id="reset-button" onclick="resetGame()">Reset Game</button>
+After these lines of code, well close the body (</body>) and were done with the html code!
+So far, the website looks REALLY BAD. We still need to add a TON of CSS, and the javascript that will make the game work.
+Unfortunately, my CSS is too long to post here, but I will make sure to include a link to the file, so you can check it out. After you copy and paste
+the CSS, the website will look 100x better. Now for the fun part, let’s make this game functional.
+Right now, there is no functionality within this website. Thankfully when we were writing out HTML, we included onclick events for the images.
+This means when the images are clicked, it will run a javascript function. Go ahead and copy and paste my code into your script.js file and save it.
+I’ve also included some functionality for cheating in this game. If you click the Reset Game button 4 times, the bot's option will light up green.

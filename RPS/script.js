@@ -162,7 +162,12 @@ function resetGame(){
     
     if(y == 4){
         cheat();
+        y=0;
     }
+    document.getElementsByClassName("choice")[0].style.borderColor = "white";
+    document.getElementsByClassName("choice")[1].style.borderColor = "white";
+    document.getElementsByClassName("choice")[2].style.borderColor = "white";
+    document.getElementsByClassName("result")[0].innerHTML = " ";
 }
 function cheat(){
     alert("Cheat activated")
