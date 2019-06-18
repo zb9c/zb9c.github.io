@@ -56,12 +56,12 @@ getLocation();
 //Set User Loaction
 setTimeout("L.marker([userLatitude, userLongitude]).addTo(myMap)",1000);
 
-
 setInterval(function(){ 
     getISSLocation();
-    setTimeout("testLocations(userLatitude, userLongitude, issLatitude, issLongitude)", 900);
-    setTimeout("L.marker([issLatitude, issLongitude]).addTo(myMap)", 1000)
+    testLocations(userLatitude, userLongitude, issLatitude, issLongitude);
+    L.marker([issLatitude, issLongitude]);
 }, 3000);
+
 
 
 
