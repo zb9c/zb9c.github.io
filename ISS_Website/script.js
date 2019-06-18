@@ -57,7 +57,7 @@ L.marker([userLatitude, userLongitude]).addTo(myMap);
 setInterval(function(){ 
     getISSLocation();
     L.marker([issLatitude, issLongitude]);
-}, 1000);
+}, 10000);
 
 
 
