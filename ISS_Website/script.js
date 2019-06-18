@@ -46,23 +46,18 @@ function showPosition(position) {
     userLatitude = Math.round(position.coords.latitude);
 }
 
-function testLocations(uLat, uLon, iLat, iLon){
-    console.log("latDistance: " + (uLat - iLat));
-    console.log("lonDistance: " + (uLon - iLon));
-    me = (uLat-iLat) + (uLon-iLon);
-    document.getElementById('visible').innerHTML = "Distance: " + me;
-}
 
 getISSLocation();
-getLocation();
-//Set User Loaction
-setTimeout("L.marker([userLatitude, userLongitude]).addTo(myMap)",1000);
 
+//Set User Loaction
+setTimeout("getLocation", 1000);
+L.marker([userLatitude, userLongitude]).addTo(myMap);
+
+//Get ISS space station location every 1 second
 setInterval(function(){ 
     getISSLocation();
-    testLocations(userLatitude, userLongitude, issLatitude, issLongitude);
     L.marker([issLatitude, issLongitude]);
-}, 100);
+}, 1000);
 
 
 
