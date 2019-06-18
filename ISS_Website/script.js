@@ -50,7 +50,7 @@ function showPosition(position) {
 //getISSLocation();
 
 //get User Loaction
-setTimeout("getLocation", 1000);
+getLocation();
 L.marker([userLatitude, userLongitude]).addTo(myMap);
 
 //Get ISS space station location every 1 second
