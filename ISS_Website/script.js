@@ -47,16 +47,16 @@ function showPosition(position) {
 }
 
 
-getISSLocation();
+//getISSLocation();
 
-//Set User Loaction
+//get User Loaction
 setTimeout("getLocation", 1000);
-L.marker([userLatitude, userLongitude]).addTo(myMap);
+L.marker([userLatitude, userLongitude], [title:"User Locations"]).addTo(myMap);
 
 //Get ISS space station location every 1 second
 setInterval(function(){ 
     getISSLocation();
-    L.marker([issLatitude, issLongitude]);
+    L.marker([issLatitude, issLongitude], [title:"ISS_Location"]).addTo(myMap);
 }, 10000);
 
 
