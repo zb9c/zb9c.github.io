@@ -29,6 +29,7 @@ function getISSLocation(){
     })
 }
 x = document.getElementById("userLocation");
+
 function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
@@ -48,7 +49,8 @@ function showPosition(position) {
 function testLocations(uLat, uLon, iLat, iLon){
     console.log("latDistance: " + (uLat - iLat));
     console.log("lonDistance: " + (uLon - iLon));
-
+    me = (uLat-iLat) + (uLon-iLon);
+    document.getElementById('visible').innerHTML = "Distance: " + me;
 }
 
 getISSLocation();
@@ -60,7 +62,7 @@ setInterval(function(){
     getISSLocation();
     testLocations(userLatitude, userLongitude, issLatitude, issLongitude);
     L.marker([issLatitude, issLongitude]);
-}, 3000);
+}, 100);
 
 
 
