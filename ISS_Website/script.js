@@ -51,12 +51,12 @@ function showPosition(position) {
 
 //get User Loaction
 setTimeout("getLocation", 1000);
-L.marker([userLatitude, userLongitude].addTo(myMap);
+L.marker([userLatitude, userLongitude]).addTo(myMap);
 
 //Get ISS space station location every 1 second
 setInterval(function(){ 
     getISSLocation();
-    L.marker([issLatitude, issLongitude].addTo(myMap);
+    L.marker([issLatitude, issLongitude]).addTo(myMap);
 }, 10000);
 
 
