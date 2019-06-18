@@ -42,7 +42,9 @@ function showPosition(position) {
     console.log("User Lon: " + position.coords.longitude);
     document.getElementById('userLat').innerHTML = "User Latitude: " + position.coords.latitude;
     document.getElementById('userLon').innerHTML = "User Longitude: " + position.coords.longitude;
-    L.marker([position.croords.latitude, position.coords.longitude]).addTo(myMap);
+    setTimeout(function(){
+        L.marker([position.croords.latitude, position.coords.longitude]).addTo(myMap);
+    },5000);
     userLongitude = Math.round(position.coords.longitude);
     userLatitude = Math.round(position.coords.latitude);
 }
