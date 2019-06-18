@@ -23,6 +23,9 @@ function getISSLocation(){
         document.getElementById('thisClass').innerHTML = "Satalite: "+ myJson['name'];
         document.getElementById('lat').innerHTML = "Latitude: " + myJson['latitude'];
         document.getElementById('lon').innerHTML = "Longitude: " + myJson['longitude'];
+        setTimeout(function(){
+            L.marker([myJson['latitude'], myJson['longitude']]).addTo(myMap);
+         },5000);
         issLatitude = Math.round(myJson['latitude']);
         issLongitude = Math.round(myJson['longitude']);
         //console.log(issLatitude, issLongitude);
@@ -49,16 +52,12 @@ function showPosition(position) {
     userLatitude = Math.round(position.coords.latitude);
 }
 
-
-//getISSLocation();
-
 //get User Loaction
 getLocation();
 
-//Get ISS space station location every 1 second
+//Get ISS space station location every 10 seconds
 setInterval(function(){ 
     getISSLocation();
-    L.marker([issLatitude, issLongitude]).addTo(myMap);
 }, 10000);
 
 
